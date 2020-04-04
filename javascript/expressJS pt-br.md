@@ -189,15 +189,41 @@ Agora, dentro da pasta public/ você poderá colocar qualquer arquivo html adici
 
 Tudo que estará dentro da pasta public poderá ser acessada pelo cliente.
 
+### JSON Page View and Exports Modules
+
+Podemos criar uma rota pra mostrar os JSON's:
+
 ```javascript
 const express = require(“express”);
 const app = express();
 const port = 80;
 const path = require(“path”);
 
-app.get(“/api/members”, (req,res)=>{
+const members = [
+	{
+    id:1,
+    name: 'John Doe',
+    email: 'john@gmail.com',
+    status: 'active'
+	},
+    {
+     id:2,
+     name: 'Bob Williams',
+     email: 'bob@gmail.com',
+     status: 'inactive'
+    }
+    {
+     id:3,
+     name: 'Shannon Jackson',
+     email: 'shannon@gmail.com',
+     status: 'active'
+    }
+]
 
-  
+// Gets all members
+app.get(“/api/members”, (req, res)=>{
+
+  res.json(members);
 
 });
 
@@ -212,4 +238,159 @@ function restartConsole(){let e=`[SERVER STATUS] Servidor atualizado ${(new Date
  
 app.listen(port, restartConsole()); 
 ```
+
+Note que agora estou passando um res.json() para mostrar todos os membros dentro da variável JSON que criei.
+
+Posso também colocar essa variável em um arquivo separado pra ficar mais organizado.
+
+Vou criar um arquivo chamado Members.js na pasta raiz do projeto e chama-lo la dentro deste modo:
+
+```javascript
+const members = [
+	{
+    id:1,
+    name: 'John Doe',
+    email: 'john@gmail.com',
+    status: 'active'
+	},
+    {
+     id:2,
+     name: 'Bob Williams',
+     email: 'bob@gmail.com',
+     status: 'inactive'
+    }
+    {
+     id:3,
+     name: 'Shannon Jackson',
+     email: 'shannon@gmail.com',
+     status: 'active'
+    }
+]
+
+module.exports = members;
+```
+
+o module.exports é necessário para o servidor carregar a aplicação.
+
+Vamos traze-lo agora para a index.js dando um require do arquivo:
+
+```javascript
+const express = require(“express”);
+const app = express();
+const port = 80;
+const path = require(“path”);
+const members = require('./Members');
+
+
+// Gets all members
+app.get(“/api/members”, (req, res)=>{
+
+  res.json(members);
+
+});
+
+// Set static folder
+app.use(express.static(path.join(__dirname, 'public')));
+
+
+
+
+function restartConsole(){let e=`[SERVER STATUS] Servidor atualizado ${(new Date).getHours()}:${(new Date).getMinutes()}:${(new Date).getSeconds()}`;console.log("===============================================================\n",e,"\n===============================================================")}
+
+
+app.listen(port, restartConsole()); 
+```
+
+### Init Middleware
+
+Uma simples função de middleware pode ser criado desta maneira:
+
+```javascript
+const express = require(“express”);
+const port = 80;
+const path = require(“path”);
+const members = require('./Members');
+
+const app = express();
+
+const logger = (req, res, next)=>{
+
+​	console.log('Hello');
+    console.log(`${req.protocol}://${req.get('host')}${req.originalUrl}`);
+	next();
+}
+// Init Middleware
+app.use(logger);
+
+// Gets all members
+app.get(“/api/members”, (req, res)=>{
+
+  res.json(members);
+
+});
+
+// Set static folder
+app.use(express.static(path.join(__dirname, 'public')));
+
+
+
+
+function restartConsole(){let e=`[SERVER STATUS] Servidor atualizado ${(new Date).getHours()}:${(new Date).getMinutes()}:${(new Date).getSeconds()}`;console.log("===============================================================\n",e,"\n===============================================================")}
+
+
+app.listen(port, restartConsole()); 
+```
+
+No console do seu cmd você poderá visualizar q foi impresso um "hello" e também uma url original.
+
+### Moment
+
+O Moment foi projetado para funcionar tanto no navegador quanto no Node.js.
+
+Todo o código deve funcionar nesses dois ambientes e todos os testes de unidade são executados nesses dois ambientes.
+
+no cmd digite:
+
+`npm i moment --save` 
+
+no index.js:
+
+```javascript
+const express = require(“express”);
+const port = 80;
+const path = require(“path”);
+const moment = require('moment');
+const members = require('./Members');
+
+const app = express();
+
+const logger = (req, res, next)=>{
+
+	console.log('Hello');
+	console.log(`${req.protocol}://${req.get('host')}${req.originalUrl}:${moment().format()}`);
+	next();
+
+}
+// Init Middleware
+app.use(logger);
+
+// Gets all members
+app.get(“/api/members”, (req, res)=>{
+
+  res.json(members);
+
+});
+
+// Set static folder
+app.use(express.static(path.join(__dirname, 'public')));
+
+
+
+
+function restartConsole(){let e=`[SERVER STATUS] Servidor atualizado ${(new Date).getHours()}:${(new Date).getMinutes()}:${(new Date).getSeconds()}`;console.log("===============================================================\n",e,"\n===============================================================")}
+
+
+app.listen(port, restartConsole());
+```
+
 
