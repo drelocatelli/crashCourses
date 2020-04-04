@@ -2,9 +2,7 @@
 
 Bem vindos ao curso de Express JS onde você irá aprender a como desenvolver aplicações como ExpressJS de maneira rápida e fácil, irá entendê-lo passo-a-passo.
 
-https://expressjs.com/
-
-https://nodejs.org/
+https://expressjs.com/ | https://nodejs.org/ | https://codessa.com.br/
 
 ## Visão geral
 
@@ -88,5 +86,86 @@ Ok, não irá visualizar nada demais ainda.
 
 Podemos criar a primeira rota agora.
 
-### Criando a primeira rota
+### Basic Router
+
+Abra o arquivo index.js que você criou no tutorial anterior;
+
+```javascript
+const express = require(“express”);
+const app = express();
+const port = 80;
+
+app.get(“/”, (req,res)=>{
+
+  res.send(“<h1>Hello World</h1>”);  
+
+});
+
+
+function restartConsole(){let e=`[SERVER STATUS] Servidor atualizado ${(new Date).getHours()}:${(new Date).getMinutes()}:${(new Date).getSeconds()}`;console.log("===============================================================\n",e,"\n===============================================================")}
+
+ 
+
+app.listen(port, restartConsole()); 
+```
+
+Note que adicionamos uma função app.get(), ao salvar e abrir o navegador agora, podemos visualizar um "Hello World" impresso na página. Tudo que você envia a partir do `res.send('');` será carregado na página. Mas espere, você não irá precisar digitar o código dessa forma feia, há várias maneiras de criar uma boa view para que seu projeto fique mais profissional.
+
+Há outros meios de responses:
+
+- res.download();
+- res.end();
+- res.json();
+- res.redirect();
+- res.render();
+- res.send();
+- res.sendFile();
+- res.sendStatus();
+
+O Express é rodado por um server-side, então você não poderá visualizar os códigos em uma view-source pública diretamente do navegador web, pois os códigos estarão rodando no lado do servidor e eles são de total responsabilidade dele para a segurança.
+
+### Path
+
+```javascript
+const express = require(“express”);
+const app = express();
+const port = 80;
+const path = require(“path”);
+
+app.get(“/”, (req,res)=>{
+
+  res.sendFile(path.join(__dirname, ‘public’, ’index.html’));
+
+});
+
+ 
+
+ 
+
+function restartConsole(){let e=`[SERVER STATUS] Servidor atualizado ${(new Date).getHours()}:${(new Date).getMinutes()}:${(new Date).getSeconds()}`;console.log("===============================================================\n",e,"\n===============================================================")}
+
+ 
+
+app.listen(port, restartConsole()); 
+```
+
+dando um require no path, `const path = require(“path”);` podemos definir um caminho para onde as rotas irão direcionar os links. Por exemplo, no tópico anterior vimos o quão ficaria feio escrevendo o código daquele jeito. Então podemos direcionar uma rota para onde os códigos da página serão carregados.
+
+Observe:
+
+```
+app.get(“/”, (req,res)=>{
+
+  res.sendFile(path.join(__dirname, ‘public’, ’index.html’));
+
+});
+```
+
+perceba que agora trocamos para `res.sendFile(*, *, *);` e ficou mais prático. São necessários três parâmetros dentro do parênteses:
+
+__dirname : é obrigatório para definir o nome do diretório atual.
+
+'public' : é a pasta que você irá criar para onde estará a view dos seus projetos, onde o cliente irá visualizar.
+
+'index.html' : é o arquivo dentro de public/ que irá carregar os códigos da rota.
 
