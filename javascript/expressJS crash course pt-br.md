@@ -177,3 +177,39 @@ Obviamente, dentro de index.html estará todo o código do layout do site.
 
 ### Set Static Folder
 
+A pasta estática servirá como uma pasta para view dos seus projetos, onde o cliente irá visualizar tudo.
+
+Para veincular arquivos estáticos, como imagens, arquivos CSS, arquivos javascript, utilize o express.static, este método é chamado de middleware.
+
+Você pode substituir a linha de código por esta que ainda estará funcionando agora de maneira estática:
+
+`app.use(express.static(path.join(__dirname, 'public')));`
+
+Agora, dentro da pasta public/ você poderá colocar qualquer arquivo html adicional que quiser. Por exemplo, se criar um arquivo chamado about.html, este poderá ser facilmente acessado por http://localhost/about.html.
+
+Tudo que estará dentro da pasta public poderá ser acessada pelo cliente.
+
+```javascript
+const express = require(“express”);
+const app = express();
+const port = 80;
+const path = require(“path”);
+
+app.get(“/api/members”, (req,res)=>{
+
+  
+
+});
+
+// Set static folder
+app.use(express.static(path.join(__dirname, 'public')));
+
+
+ 
+
+function restartConsole(){let e=`[SERVER STATUS] Servidor atualizado ${(new Date).getHours()}:${(new Date).getMinutes()}:${(new Date).getSeconds()}`;console.log("===============================================================\n",e,"\n===============================================================")}
+
+ 
+app.listen(port, restartConsole()); 
+```
+
