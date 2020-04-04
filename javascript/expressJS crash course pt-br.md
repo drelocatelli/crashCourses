@@ -4,6 +4,8 @@ Bem vindos ao curso de Express JS onde você irá aprender a como desenvolver ap
 
 https://expressjs.com/ | https://nodejs.org/ | https://codessa.com.br/
 
+[Video tutorial (em inglês)](https://www.youtube.com/watch?v=L72fhGm1tfE)
+
 ## Visão geral
 
 ExpressJS é um framework javascript criado para rodar no server-side ou back-end focado nas linguagens javascript e nodeJS. Assim, podemos criar roteamento e leitura com servidor e banco de dados SQL ou NOSQL com segurança, além dos códigos serem mantidos no server-side, não havendo possibilidade de ter acesso ao conteúdo do código.
@@ -48,7 +50,7 @@ app.get(“/”, function(req, res){
 
 ------
 
-## Criando seu Primeiro App Express!
+## Seu Primeiro App Express!
 
 Crie uma pasta para seu primeiro projeto, ela deve estar vazia. Abra com o prompt de comandos, cd caminho_da_pasta_do_projeto/ e dê um enter.
 
@@ -153,7 +155,7 @@ dando um require no path, `const path = require(“path”);` podemos definir um
 
 Observe:
 
-```
+```javascript
 app.get(“/”, (req,res)=>{
 
   res.sendFile(path.join(__dirname, ‘public’, ’index.html’));
@@ -168,4 +170,10 @@ __dirname : é obrigatório para definir o nome do diretório atual.
 'public' : é a pasta que você irá criar para onde estará a view dos seus projetos, onde o cliente irá visualizar.
 
 'index.html' : é o arquivo dentro de public/ que irá carregar os códigos da rota.
+
+agora crie uma pasta chamada public e dentro dela um arquivo chamado index.html.
+
+Obviamente, dentro de index.html estará todo o código do layout do site.
+
+### Set Static Folder
 
