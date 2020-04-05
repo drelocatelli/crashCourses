@@ -1,4 +1,6 @@
 # Javascript Crash Course
 
-- Linguagem NodeJS:
--- [Express](/expressJS%20pt-br.md)
+Diretório do Javascript, selecione o tipo.
+
+- Linguagem NodeJS
+  - [Express](/expressJS pt-br.md)
