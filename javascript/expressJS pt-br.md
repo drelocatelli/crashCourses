@@ -19,20 +19,15 @@ ExpressJS é um framework javascript criado para rodar no server-side ou back-en
   - [HTTP Status Code](#http-status-code)
   
   - [Basic Route Handling](#basic-route-handling)
-  
 - [Seu Primeiro App Express!](#seu-primeiro-app-express)
-  
   - [Basic Router](#basic-router)
-  
-  - [Path](#path)
-  
+  - [Path Redirect](#path)
   - [Set Static Folder](#set-static-folder)
-  
-  - [JSON Page View and Export Modules](#json-page-view-and-export-modules)
-  
-    
-
-
+  - [JSON Page View and Exports Modules](#json-page-view-and-exports-modules)
+  - [Init Middleware](#init-middleware)
+  - [Moment Tool](#moment)
+  - [Middleware](#middleware-folder)
+  - [Url Parameters](#url-parameters)
 
 #### HTTP Status Code
 
@@ -418,7 +413,7 @@ app.listen(port, restartConsole());
 
 crie uma pasta chamada Middleware na raiz do seu projeto e dentro crie um arquivo chamado logger.js
 
-recorte esse trecho de código do seu index.js
+retire esse trecho de código do seu index.js
 
 ```javascript
 const moment = require('moment');
@@ -453,3 +448,56 @@ agora traga-o para o index.js
 `const logger = require('./middleware/logger');` repare que agora temos um arquivo separado apenas para logger e o uso do moment, bem organizado!
 
 Você pode comentar a linha `app.use(logger);` pois não irá precisar dela.
+
+### Url Parameters
+
+Agora vamos criar um trecho de código get single member, um parâmetro de url para obter um membro de id específico.
+
+```javascript
+const express = require(“express”);
+const port = 80;
+const path = require(“path”);
+const members = require('./Members');
+
+const app = express();
+
+// Init Middleware
+// app.use(logger);
+
+// Gets all members
+app.get(“/api/members”, (req, res)=>{ res.json(members); });
+
+// Get Single Member
+app.get('api/members/:id'), (req, res) =>{
+	res.send(req.params.id);
+});
+
+// Set static folder
+app.use(express.static(path.join(__dirname, 'public')));
+
+
+
+
+function restartConsole(){let e=`[SERVER STATUS] Servidor atualizado ${(new Date).getHours()}:${(new Date).getMinutes()}:${(new Date).getSeconds()}`;console.log("===============================================================\n",e,"\n===============================================================")}
+
+
+app.listen(port, restartConsole());
+```
+
+também pode substituir o `res.send(req.params.id);` por uma página em JSON, deste modo `res.json(req.params.id);` para filtrar o membro, vamos passar um function, deste modo:
+
+- [ ] **Filtrando um membro pelo seu ID requisitado:**
+
+```javascript
+// Get Single Member
+app.get('api/members/:id'), (req, res) =>{
+	res.json(members.filter(member => member.id === req.params.id));
+});
+```
+
+agora abra seu navegador em localhost/api/members/NUMERO_ID
+
+em NUMERO_ID passe o id do membro, por exemplo localhost/api/members/2
+
+
+
