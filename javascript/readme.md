@@ -4,6 +4,6 @@ Diretório do Javascript, selecione o tipo.
 
 | FrontEnd                    | BackEnd                         |
 | --------------------------- | ------------------------------- |
-| [javascript](javascript.md) | [Express](expressJS%20pt-br.md) |
-|                             | [NodeJS](nodejs.md)             |
+| [Javascript](javascript.md) | [Express](expressJS%20pt-br.md) |
+| [Jquery](jquery.md)                            | [NodeJS](nodejs.md)             |
 
