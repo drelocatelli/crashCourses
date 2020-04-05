@@ -25,8 +25,6 @@ ExpressJS é um framework javascript criado para rodar no server-side ou back-en
   - [Set Static Folder](#set-static-folder)
   - [JSON Page View and Exports Modules](#json-page-view-and-exports-modules)
   - [Init Middleware](#init-middleware)
-  - [Moment Tool](#moment)
-  - [Middleware](#middleware-folder)
   - [Url Parameters](#url-parameters)
 
 #### HTTP Status Code
