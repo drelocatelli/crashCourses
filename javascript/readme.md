@@ -2,6 +2,8 @@
 
 Diretório do Javascript, selecione o tipo.
 
-- Linguagem NodeJS
+- BackEnd
   - [Express](expressJS%20pt-br.md)
   
+- FrontEnd
+  - [Javascript](javascript.md)
