@@ -27,6 +27,9 @@ ExpressJS é um framework javascript criado para rodar no server-side ou back-en
   - [Init Middleware](#init-middleware)
   - [Url Parameters](#url-parameters)
   - [Routes Folder](#routes-folder)
+  - [BodyParser](#bodyparser)
+  - [Request Post](#request-post)
+  - [Template Engines](#template-engines)
 
 #### HTTP Status Code
 
@@ -589,6 +592,8 @@ const app = express();
 
 // Set static folder
 app.use(express.static(path.join(__dirname, 'public')));
+
+// Members API Routes
 app.use('/api/members', require('./routes/api/members'));
 
 
@@ -603,7 +608,7 @@ e a members.js pode ser reescrita desta forma:
 ```javascript
 const express = require('express');
 const router = express.Router();
-const members = require('./Members');
+const members = require('../../Members');
 
 // Gets all members
 router.get(“/”, (req, res) => { res.json(members); });
@@ -624,4 +629,122 @@ router.get('/:id'), (req, res) => {
 
 module.exports = router;
 ```
+
+### Request POST
+
+- [ ] **Criando um novo membro**
+
+Vamos agora criar uma rota de tipo POST, onde poderemos adicionar membros de maneira dinâmica.
+
+Dentro de members.js:
+
+```javascript
+const express = require('express');
+const router = express.Router();
+const members = require('../../Members');
+
+// Gets all members
+router.get(“/”, (req, res) => { res.json(members); });
+
+// Get Single Member
+router.get('/:id'), (req, res) => {
+	const found = members.some(member => member.id === parseInt(req.params.id));
+
+	if (found) {
+		res.json(members.filter(member => member.id === parseInt(req.params.id)));
+	} else {
+		res.status(400).json({
+			msg: `Nenhum membro com o id ${req.params.id}`
+		});
+	}
+
+});
+
+// Create a new member
+router.post('/', (req, res)=>{
+    res.send(req.body);
+});
+
+module.exports = router;
+```
+
+Você pode utilizar o [POSTMAN](https://www.postman.com/) para adicionar eles, e então na aplicação selecione o método POST e coloque o link: http://localhost/api/members/ , selecione "headers" e envie um dado passando a key e o value.
+
+### BodyParser
+
+O BodyParser extrai toda a parte do body de um fluxo de solicitação de entrada e a expõe em req.body com algo mais fácil com interface. Irá passar requisições HTTP no corpo, ele é necessário para quando você precisa saber mais sobre o URL que foi requisitado, particulamente falando em requisições POST, PUT, PATCH, HTTP onde as informações que você deseja contém um corpo. 
+
+Basicamente, é um Middleware para passar um JSON, plain text, ou apenas retornar algum objeto. Seu uso é opcional.
+
+Voltando para o index.js, adicione a linha:
+
+```javascript
+// BodyParser Middleware
+app.use(express.json());
+app.use(express.urlencoded({	extended:false	}));
+```
+
+### Template Engines
+
+Uma template engine é muito útil para manter o código javascript mais profissional. o [EJS](https://github.com/tj/ejs) é uma template engine com uma sintaxe muito boa e um pouco parecida com o PHP. Com ele você pode escrever códigos HTML e Javascript na mesma sintonia, isto é, com as duas sintaxes misturadas sem dar nenhum conflito.
+
+[Documentação completa aqui](https://ejs.co/)
+
+Com o EJS podemos fazer um padrão de arquitetura MVC, isto é, Models, Views e Controllers.
+
+Para isso vamos precisar da seguinte estrutura de arquivos, sempre com a extensão .ejs:
+
+- <u>**public/**</u>
+  - <u>**css/**</u>
+    - <u>**styles.css**</u>
+  - <u>**views/**</u>
+    - <u>**layouts.ejs**</u>
+    - <u>**pages/**</u>
+      - <u>**about.ejs**</u>
+      - <u>**contact.ejs**</u>
+      - <u>**home.ejs**</u>
+- <u>**package.json**</u>
+- <u>**server.js**</u> 
+
+O Código poderá ser escrito desta maneira, por exemplo:
+
+```html
+<title>
+    <% var title = title; %>
+    <%= title; %>
+</title>
+```
+
+Mas atenção, cada tag tem sua função:
+
+| Tag  | Função                                                       |
+| ---- | ------------------------------------------------------------ |
+| <%   | 'scriptlet' tag, para fluxo de controle, sem saída.          |
+| <%=  | saída de valores, quando deseja imprimir algo na tela (HTML scaped). |
+| %>   | t                                                            |
+
+no seu cmd instale a dependência EJS:
+
+`npm install ejs --save`
+
+dentro do server.js adicione a linha:
+
+```javascript
+app.set('view engine', 'ejs');
+app.get('/', (req, res)=>{
+    res.render('index', {title: 'Página Inicial'});
+});
+```
+
+Perceba que ficou mais simples de definir o caminho da sua view.
+
+<u>de outra forma, você pode apenas especificar o ejs como view que ele irá gerar os arquivos automaticamente para você:</u>
+
+<u>`express --css=sass --view=ejs</u>`
+
+Crie agora o diretório views/ dentro da pasta raiz do seu projeto.
+
+Crie um arquivo chamado index.ejs e coloque códigos html.
+
+Ele é simples assim.
 
