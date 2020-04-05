@@ -392,5 +392,42 @@ function restartConsole(){let e=`[SERVER STATUS] Servidor atualizado ${(new Date
 
 app.listen(port, restartConsole());
 ```
+### Middleware Folder
 
+crie uma pasta chamada Middleware na raiz do seu projeto e dentro crie um arquivo chamado logger.js
 
+recorte esse trecho de código do seu index.js
+
+```javascript
+const moment = require('moment');
+
+const logger = (req, res, next)=>{
+
+	console.log('Hello');
+	console.log(`${req.protocol}://${req.get('host')}${req.originalUrl}:${moment().format()}`);
+	next();
+
+}
+```
+
+e cole dessa maneira dentro de logger.js
+
+```javascript
+const moment = require('moment');
+
+const logger = (req, res, next)=>{
+
+	console.log('Hello');
+	console.log(`${req.protocol}://${req.get('host')}${req.originalUrl}:${moment().format()}`);
+	next();
+
+}
+
+module.exports = logger;
+```
+
+agora traga-o para o index.js
+
+`const logger = require('./middleware/logger');` repare que agora temos um arquivo separado apenas para logger e o uso do moment, bem organizado!
+
+Você pode comentar a linha `app.use(logger);` pois não irá precisar dela.
