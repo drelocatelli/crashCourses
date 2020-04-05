@@ -527,7 +527,7 @@ Isso deixará o index.js mais limpo e organizado.
 Retire então essas linhas do index.js:
 
 ```javascript
-constmembers = require('./Members');
+const members = require('./Members');
 
 // Gets all members
 app.get(“/api/members”, (req, res)=>{ res.json(members); });
