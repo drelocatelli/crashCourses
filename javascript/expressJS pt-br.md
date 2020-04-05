@@ -721,7 +721,7 @@ Mas atenção, cada tag tem sua função:
 | ---- | ------------------------------------------------------------ |
 | <%   | 'scriptlet' tag, para fluxo de controle, sem saída.          |
 | <%=  | saída de valores, quando deseja imprimir algo na tela (HTML scaped). |
-| %>   | t                                                            |
+| %>   | Fechamento de tag                                                            |
 
 no seu cmd instale a dependência EJS:
 
