@@ -26,6 +26,7 @@ ExpressJS é um framework javascript criado para rodar no server-side ou back-en
   - [JSON Page View and Exports Modules](#json-page-view-and-exports-modules)
   - [Init Middleware](#init-middleware)
   - [Url Parameters](#url-parameters)
+  - [Routes Folder](#routes-folder)
 
 #### HTTP Status Code
 
@@ -489,7 +490,7 @@ também pode substituir o `res.send(req.params.id);` por uma página em JSON, de
 ```javascript
 // Get Single Member
 app.get('api/members/:id'), (req, res) =>{
-	res.json(members.filter(member => member.id === req.params.id));
+	res.json(members.filter(member => member.id === parseInt(req.params.id)));
 });
 ```
 
@@ -497,5 +498,130 @@ agora abra seu navegador em localhost/api/members/NUMERO_ID
 
 em NUMERO_ID passe o id do membro, por exemplo localhost/api/members/2
 
+podemos colocar tudo em uma constante para procurar, e se não achar irá mostrar um erro personalizado:
 
+```javascript
+// Get Single Member
+app.get('api/members/:id'), (req, res) => {
+	const found = members.some(member => member.id === parseInt(req.params.id));
+
+	if(found){
+		res.json(members.filter(member => member.id === parseInt(req.params.id)));
+	}else{
+		res.status(400).json({
+			msg: `Nenhum membro com o id ${req.params.id}`
+		});
+	}
+
+});
+```
+
+Se acessar um membro que não existe agora irá retornar uma mensagem.
+
+### Routes folder
+
+Crie uma pasta chamada routes na raiz do seu projeto, depois crie uma outra chamada api e dentro dela um arquivo chamado members.js
+
+Isso deixará o index.js mais limpo e organizado.
+
+Retire então essas linhas do index.js:
+
+```javascript
+constmembers = require('./Members');
+
+// Gets all members
+app.get(“/api/members”, (req, res)=>{ res.json(members); });
+
+// Get Single Member
+app.get('api/members/:id'), (req, res) => {
+	const found = members.some(member => member.id === parseInt(req.params.id));
+
+	if(found){
+		res.json(members.filter(member => member.id === parseInt(req.params.id)));
+	}else{
+		res.status(400).json({
+			msg: `Nenhum membro com o id ${req.params.id}`
+		});
+	}
+
+});
+```
+
+e cole dentro de members.js que você acabou de criar. Deste modo:
+
+```javascript
+const express = require('express');
+const router = express.Router();
+const members = require('./Members');
+
+// Gets all members
+router.get(“/api/members”, (req, res)=>{ res.json(members); });
+
+// Get Single Member
+router.get('api/members/:id'), (req, res) => {
+	const found = members.some(member => member.id === parseInt(req.params.id));
+
+	if(found){
+		res.json(members.filter(member => member.id === parseInt(req.params.id)));
+	}else{
+		res.status(400).json({
+			msg: `Nenhum membro com o id ${req.params.id}`
+		});
+	}
+
+});
+
+module.exports = router;
+```
+
+e adicionamos um app.get no index.js:
+
+```javascript
+const express = require(“express”);
+const port = 80;
+const path = require(“path”);
+
+const app = express();
+
+// Init Middleware
+// app.use(logger);
+
+
+// Set static folder
+app.use(express.static(path.join(__dirname, 'public')));
+app.use('/api/members', require('./routes/api/members'));
+
+
+function restartConsole(){let e=`[SERVER STATUS] Servidor atualizado ${(new Date).getHours()}:${(new Date).getMinutes()}:${(new Date).getSeconds()}`;console.log("===============================================================\n",e,"\n===============================================================")}
+
+
+app.listen(port, restartConsole());
+```
+
+e a members.js pode ser reescrita desta forma:
+
+```javascript
+const express = require('express');
+const router = express.Router();
+const members = require('./Members');
+
+// Gets all members
+router.get(“/”, (req, res) => { res.json(members); });
+
+// Get Single Member
+router.get('/:id'), (req, res) => {
+	const found = members.some(member => member.id === parseInt(req.params.id));
+
+	if (found) {
+		res.json(members.filter(member => member.id === parseInt(req.params.id)));
+	} else {
+		res.status(400).json({
+			msg: `Nenhum membro com o id ${req.params.id}`
+		});
+	}
+
+});
+
+module.exports = router;
+```
 
