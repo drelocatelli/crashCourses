@@ -5,7 +5,7 @@ Você irá aprender a como fazer um menu dropDown igual a prévia acima.
 
 Primeiro vamos definir a estrutura HTML dele:
 
-- [ ] ## HTML
+## HTML
 
 ```html
 <div class="menu">
@@ -41,7 +41,7 @@ Primeiro vamos definir a estrutura HTML dele:
 
 Agora você precisa adicionar o CSS, cole antes de </body> :
 
-- [ ] ## CSS
+## CSS
 
 ```css
 <style type="text/css">
@@ -155,7 +155,7 @@ Agora você precisa adicionar o CSS, cole antes de </body> :
 
 Ou, se preferir um css minificado:
 
-- [ ] ## CSS MINIFICADO
+## CSS MINIFICADO
 
 ```css
 <style type="text/css">
