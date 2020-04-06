@@ -11,6 +11,7 @@ Bem vindo ao curso rápido de flexbox em pt-br.
 - [Visão Geral](#visão-geral)
 - [Propriedades CSS](#propriedades-css)
   - [flex-direction](#propriedade-flex-direction)
+  - [flex-wrap](#propriedade-flex-wrap)
 
 ------
 
@@ -69,3 +70,29 @@ Por padrão, é definida como `flex-direction: row`;
 Note que agora a posição dos itens mudaram.
 
 ![](https://github.com/drelocatelli/crashCourses/blob/master/flexbox/images/4.PNG)
+
+`flex-direction:row-reverse;`
+
+A linha também.
+
+![](https://github.com/drelocatelli/crashCourses/blob/master/flexbox/images/5.PNG)
+
+## Propriedade flex-wrap
+
+Essa propriedade especifica se os flex items irão ter uma quebra de linha ou não.
+
+O exemplo, com 12 itens.
+
+`flex-wrap: wrap;`
+
+![](https://github.com/drelocatelli/crashCourses/blob/master/flexbox/images/6.PNG)
+
+`flex-wrap: nowrap;`
+
+Esse é o valor padrão.
+
+`flex-wrap: wrap-reverse;`
+
+Reverte a posição dos itens.
+
+![](https://github.com/drelocatelli/crashCourses/blob/master/flexbox/images/7.PNG)
