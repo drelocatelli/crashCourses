@@ -54,4 +54,8 @@ As propriedades CSS do flex container são:
 - align-items
 - align-content
 
-### Propriedade flex-direction:
+### Propriedade flex-direction
+
+Essa propriedade define qual direção o container quer empilhar os flex items.
+
+![](https://github.com/drelocatelli/crashCourses/blob/master/flexbox/images/2.PNG)
