@@ -12,6 +12,9 @@ Bem vindo ao curso rápido de flexbox em pt-br.
 - [Propriedades CSS](#propriedades-css)
   - [flex-direction](#propriedade-flex-direction)
   - [flex-wrap](#propriedade-flex-wrap)
+  - [flex-flow](#propriedade-flex-flow)
+  - [justify-content](#propriedade-justify-content)
+  - [align-items](#propriedade-align-items)
 
 ------
 
@@ -96,3 +99,28 @@ Esse é o valor padrão.
 Reverte a posição dos itens.
 
 ![](https://github.com/drelocatelli/crashCourses/blob/master/flexbox/images/7.PNG)
+
+## Propriedade flex-flow
+
+É uma propriedade abreviada para definir as propriedades flex-direction e flex-wrap. Você pode definir esses dois atributos em apenas uma tag, simples assim.
+
+`flex-flow: row wrap;`
+
+## Propriedade justify-content
+
+É a propriedade utilizada para alinhar os flex items.
+
+`justify-content: center;`
+
+`center, flex-start, flex-end, space-around, space-between`
+
+![](https://github.com/drelocatelli/crashCourses/blob/master/flexbox/images/8.PNG)
+
+## Propriedade align-items
+
+É usada para alinhar os flex items verticalmente.
+
+`align-items:center;`
+
+`flex-start, flex-end, stretch, baseline `
+
