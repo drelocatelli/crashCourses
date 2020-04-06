@@ -10,7 +10,7 @@ Bem vindo ao curso rápido de flexbox em pt-br.
 
 - [Visão Geral](#visão-geral)
 - [Propriedades CSS](#propriedades-css)
-  - [Propriedade flex-direction](#propriedade-flex-direction)
+  - [flex-direction](#propriedade-flex-direction)
 
 ------
 
@@ -27,7 +27,7 @@ O Elemento acima representa uma flexbox container (a área azul) com 3 flex iten
 Exemplo:
 
 ```html
-<div class="flexbox-container">
+<div class="flex-container">
     <div>1</div>
     <div>2</div>
     <div>3</div>
@@ -48,14 +48,20 @@ Exemplo:
 
 As propriedades CSS do flex container são:
 
-- flex-direction
-- flex-wrap
-- justify-content
-- align-items
-- align-content
+- `flex-direction`
+- `flex-wrap`
+- `justify-content`
+- `align-items`
+- `align-content`
 
 ## Propriedade flex-direction
 
 Essa propriedade define qual direção o container quer empilhar os flex items.
 
 ![](https://github.com/drelocatelli/crashCourses/blob/master/flexbox/images/2.PNG)
+
+Por padrão, é definida como `flex-direction: row`;
+
+Se alterar para `flex-direction: column;` ficará assim:
+
+![](https://github.com/drelocatelli/crashCourses/blob/master/flexbox/images/3.PNG)
