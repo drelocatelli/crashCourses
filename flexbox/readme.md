@@ -14,7 +14,7 @@ Bem vindo ao curso rápido de flexbox em pt-br.
 
 ------
 
-### Visão Geral
+## Visão Geral
 
 O Flexbox ou também conhecido como caixa de layout flexível, faz com que fique fácil de criar designs flexíveis e responsivas estruturas. 
 
@@ -44,7 +44,7 @@ Exemplo:
 }
 ```
 
-### Propriedades CSS
+## Propriedades CSS
 
 As propriedades CSS do flex container são:
 
@@ -54,7 +54,7 @@ As propriedades CSS do flex container são:
 - align-items
 - align-content
 
-### Propriedade flex-direction
+## Propriedade flex-direction
 
 Essa propriedade define qual direção o container quer empilhar os flex items.
 
