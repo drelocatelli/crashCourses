@@ -58,10 +58,14 @@ As propriedades CSS do flex container são:
 
 Essa propriedade define qual direção o container quer empilhar os flex items.
 
-![](https://github.com/drelocatelli/crashCourses/blob/master/flexbox/images/2.PNG)
-
 Por padrão, é definida como `flex-direction: row`;
 
-Se alterar para `flex-direction: column;` ficará assim:
+ `flex-direction: column;`
 
 ![](https://github.com/drelocatelli/crashCourses/blob/master/flexbox/images/3.PNG)
+
+`flex-direction: column-reverse;`
+
+Note que agora a posição dos itens mudaram.
+
+![](https://github.com/drelocatelli/crashCourses/blob/master/flexbox/images/4.PNG)
