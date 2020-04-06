@@ -124,3 +124,6 @@ Reverte a posição dos itens.
 
 `flex-start, flex-end, stretch, baseline `
 
+Exemplo utilizando vários tamanhos:
+
+![](https://github.com/drelocatelli/crashCourses/blob/master/flexbox/images/9.PNG)
