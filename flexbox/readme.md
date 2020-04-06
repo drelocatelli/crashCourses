@@ -15,6 +15,12 @@ Bem vindo ao curso rápido de flexbox em pt-br.
   - [flex-flow](#propriedade-flex-flow)
   - [justify-content](#propriedade-justify-content)
   - [align-items](#propriedade-align-items)
+  - [align-content](#propriedade-align-content)
+    - [Alinhando perfeitamente no centro](#alinhando-perfeitamente-no-centro)
+  - [flex-grow](#propriedade-flex-grow)
+  - [flex-shrink](#propriedade-flex-shrink)
+  - [flex-basis](#propriedade-flex-basis)
+- [Projetos criados com o flexbox](#projetos-com-o-flexbox)
 
 ------
 
@@ -127,3 +133,54 @@ Reverte a posição dos itens.
 Exemplo utilizando vários tamanhos:
 
 ![](https://github.com/drelocatelli/crashCourses/blob/master/flexbox/images/9.PNG)
+
+## Propriedade align-content
+
+É usada para alinhar as linhas flex.
+
+Nesse exemplo nós usamos 600px para demonstrar melhor o `align-content: space-between;`
+
+`space-between, stretch, center, flex-start, flex-end `
+
+![](https://github.com/drelocatelli/crashCourses/blob/master/flexbox/images/10.PNG)
+
+## Alinhando perfeitamente no centro
+
+Com o flexbox você poderá alinhar perfeitamente os itens no centro.
+
+![](https://github.com/drelocatelli/crashCourses/blob/master/flexbox/images/11.PNG)
+
+basta adicionar a linha:
+
+```css
+justify-content: center; // alinha na horizontal -
+align-items: center; // alinha na vertical |
+```
+
+## Propriedade flex-grow
+
+Especifica o quanto um flex item pode crescer de tamanho sobre os outros.
+
+`flex-grow: 8;`
+
+![](https://github.com/drelocatelli/crashCourses/blob/master/flexbox/images/12.PNG)
+
+## Propriedade flex-shrink
+
+Especifica o quanto um flex item irá ser reduzido de tamanho sobre os outros.
+
+`flex-shrink: 0;`
+
+## Propriedade flex-basis
+
+Especifica um comprimento inicial de uma flex item.
+
+`flex-basis: 200px;`
+
+Dessa vez como pixels.
+
+## Projetos com o flexbox
+
+![](https://github.com/drelocatelli/crashCourses/blob/master/flexbox/images/13.PNG)
+
+![](https://github.com/drelocatelli/crashCourses/blob/master/flexbox/images/14.PNG)
