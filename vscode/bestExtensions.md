@@ -23,3 +23,5 @@
 **CSS Peek**
 
 **HTML Boilerplate**
+(keybindings.json)[keybindings.json]
+(old.settings.json)[old.settings.json]
