@@ -24,6 +24,8 @@
 
 **HTML Boilerplate**
 
+%appdata%\Code\User
+
 [keybindings.json](keybindings.json)
 
 [old.settings.json](old.settings.json)
