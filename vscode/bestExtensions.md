@@ -29,3 +29,7 @@
 [keybindings.json](keybindings.json)
 
 [old.settings.json](old.settings.json)
+
+Integrated Terminal
+
+File -> Preferences -> Setting -> Features -> Terminal -> Inherit Env
