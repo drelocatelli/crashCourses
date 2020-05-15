@@ -1,0 +1,57 @@
+// Place your key bindings in this file to override the defaultsauto[]
+[
+    {
+        "key": "ctrl+shift+oem_7",
+        "command": "workbench.action.togglePanel"
+    },
+    {
+        "key": "ctrl+j",
+        "command": "-workbench.action.togglePanel"
+    },
+    {
+        "key": "ctrl+j",
+        "command": "editor.action.joinLines"
+    },
+    {
+        "key": "ctrl+shift+r ctrl+shift+r",
+        "command": "editor.action.reindentlines"
+    },
+    {
+        "key": "ctrl+r ctrl+r",
+        "command": "editor.action.reindentselectedlines"
+    },
+    {
+        "key": "ctrl+shift+tab ctrl+shift+r",
+        "command": "editor.action.indentUsingTabs"
+    },
+    {
+        "key": "shift+enter",
+        "command": "extension.trailing-semicolon",
+        "when": "editorTextFocus"
+    },
+    {
+        "key": "win+oem_1",
+        "command": "-extension.trailing-semicolon",
+        "when": "editorTextFocus"
+    },
+    {
+        "key": "ctrl+enter",
+        "command": "editor.action.insertLineAfter",
+        "when": "editorTextFocus && !editorReadonly"
+    },
+    {
+        "key": "ctrl+enter",
+        "command": "-editor.action.insertLineAfter",
+        "when": "editorTextFocus && !editorReadonly"
+    },
+    {
+        "key": "ctrl+shift+enter",
+        "command": "editor.action.insertLineBefore",
+        "when": "editorTextFocus && !editorReadonly"
+    },
+    {
+        "key": "ctrl+shift+enter",
+        "command": "-editor.action.insertLineBefore",
+        "when": "editorTextFocus && !editorReadonly"
+    }
+]

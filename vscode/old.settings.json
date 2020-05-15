@@ -1,0 +1,16 @@
+{
+    "editor.formatOnPaste": true,
+    "editor.multiCursorModifier": "ctrlCmd",
+    "editor.snippetSuggestions": "top",
+    "editor.wordWrap": "on",
+    "workbench.iconTheme": "eq-material-theme-icons",
+    "liveServer.settings.donotShowInfoMsg": true,
+    "workbench.activityBar.visible": true,
+    "window.zoomLevel": 0,
+    "workbench.tree.indent": 10,
+    "errorLens.hintColor": "rgba(20,140,140,0.21)",
+    "errorLens.infoColor": "rgba(20,140,140,0.21)",
+    "editor.tabSize": 6,
+    "dart.flutterSdkPath": "C:\\src\\flutter",
+    terminal.integrated.shell.*
+}
