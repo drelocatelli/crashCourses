@@ -18,4 +18,4 @@ Toda vez que for executar uma compilação no console, aperte F5.
 javac arquivo.java
 
 ### Executa
-java arquivo.class
+java arquivo.java
