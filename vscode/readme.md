@@ -36,4 +36,4 @@ File -> Preferences -> Setting -> Features -> Terminal -> Inherit Env
 
 ![alt text](aqR4h.png)
 
-[Como instalar Java no VS CODE](/java.md)
+[Como instalar Java no VS CODE](/vscode/java.md)
