@@ -11,3 +11,5 @@ Certifique que o java SDK esteja instalado em sua máquina.
 5. Mude para "External Terminal".
 
 Toda vez que for executar uma compilação no console, aperte F5.
+
+[Como compilar java no terminal](https://pt.wikihow.com/Compilar-e-Executar-um-Programa-Java-Usando-o-Prompt-de-Comando)
