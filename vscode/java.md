@@ -1,11 +1,12 @@
 # Instalando Java no VS Code
 
 Certifique que o java SDK esteja instalado em sua máquina. 
-[Java SDK no Linux](https://docs.oracle.com/javase/8/docs/technotes/guides/install/linux_jdk.html#BJFJJEFG)
+[Java SDK no Linux](https://www.youtube.com/watch?v=Hw9fYjH4lT4)
 
 1. Baixe a extensão dentro do VS CODE: "Java Extension Pack".
 2. No VS CODE, clique em file>preferences>settings e então pesquise por " java home".
-3. Copie o caminho que está abaixo, algo como "java.home":"C:\\Program Files\\Java\\jdk11.0_8" e substitua para onde está localizado seu jdk.
+3. Clique em "Edit in settings.json" e dentro das aspas coloque o caminho do jdk.
+***Geralmente, no Linux fica em /usr/lib/jvm/java-1.x.x-openjdk***
 4. Agora pesquise por "java debug settings console".
 5. Mude para "External Terminal".
 
