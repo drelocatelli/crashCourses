@@ -13,7 +13,7 @@ Certifique que o java SDK esteja instalado em sua máquina.
 Toda vez que for executar uma compilação no console, aperte F5.
 
 ## Como compilar Java no terminal
-Assista o video [Compilando e executando códigos java](https://youtu.be/KIpuhJbNhN4) ou vá para variaveis de ambiente abaixo: 
+Assista o video [Compilando e executando códigos java no terminal](https://youtu.be/KIpuhJbNhN4) ou vá para variaveis de ambiente abaixo: 
 
 
 ## Variaveis de ambiente:
