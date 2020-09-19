@@ -24,8 +24,7 @@ Path = (se tiver varios adiciona um ";" antes de colar:) C:\Program Files\Java\j
 ClassPath = .;C:\Program Files\Java\jdk1.8.0_241\lib
 
 
-### Compila
-javac arquivo.java
+## Comando python que executa java:
+Baixe: https://raw.githubusercontent.com/drelocatelli/crashCourses/master/vscode/java_cmd.py
 
-### Executa
-java arquivo (sem extensão)
+execute esse comando.
