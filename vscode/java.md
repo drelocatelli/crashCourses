@@ -13,9 +13,10 @@ Certifique que o java SDK esteja instalado em sua máquina.
 Toda vez que for executar uma compilação no console, aperte F5.
 
 ## Como compilar Java no terminal
+Primeiro assista o vídeo pra configurar o DOS: [Compilando e executando códigos java](https://youtu.be/KIpuhJbNhN4)
 
 ### Compila
 javac arquivo.java
 
 ### Executa
-java arquivo.java
+java arquivo (sem extensão)
