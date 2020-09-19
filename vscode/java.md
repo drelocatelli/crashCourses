@@ -15,6 +15,12 @@ Toda vez que for executar uma compilação no console, aperte F5.
 ## Como compilar Java no terminal
 Primeiro assista o vídeo pra configurar o DOS: [Compilando e executando códigos java](https://youtu.be/KIpuhJbNhN4)
 
+## Variaveis de ambiente:
+Java_Home = C:\Program Files\Java\jdk1.8.0_241
+Path = (se tiver varios adiciona um ";" antes de colar:) C:\Program Files\Java\jdk1.8.0_241\bin
+ClassPath = .;C:\Program Files\Java\jdk1.8.0_241\lib
+
+
 ### Compila
 javac arquivo.java
 
