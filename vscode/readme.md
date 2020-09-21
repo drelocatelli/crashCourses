@@ -24,6 +24,14 @@
 
 **HTML Boilerplate**
 
+**Dracula Official**
+
+**Java Snippets**
+
+**Language support for java**
+
+**Visual Studio Intellicode**
+
 %appdata%\Code\User
 
 [keybindings.json](keybindings.json)
