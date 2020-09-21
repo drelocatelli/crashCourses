@@ -26,7 +26,7 @@
 
 **Dracula Official**
 
-**Java Snippets**
+**Java Snippets** ext install tushortz.java-snippets
 
 **Language support for java**
 
