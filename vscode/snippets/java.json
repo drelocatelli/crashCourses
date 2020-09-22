@@ -32,7 +32,7 @@
 	"Public static void main": {
 		"prefix": ["main"],
 		"body": [
-			"Public static void main(String[] args){\n\t$1\n}"
+			"public static void main(String[] args){\n\t$1\n}"
 		],
 		"description": "Main"
 	}
