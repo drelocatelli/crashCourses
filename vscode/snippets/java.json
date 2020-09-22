@@ -16,7 +16,7 @@
 	"Print to Console": {
 		"prefix": ["sysout", "println"],
 		"body": [
-			"System.out.println(\"$1\");"
+			"System.out.println($1);"
 		],
 		"description": "Print to the console"
 	}
@@ -24,7 +24,7 @@
 	"Print to Console without ln": {
 		"prefix": ["print"],
 		"body": [
-			"System.out.print(\"$1\");"
+			"System.out.print($1);"
 		],
 		"description": "Print to the console"
 	}
