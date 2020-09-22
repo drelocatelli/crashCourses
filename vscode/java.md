@@ -6,7 +6,7 @@ Certifique que o java SDK esteja instalado em sua máquina.
 1. Baixe a extensão dentro do VS CODE: "Java Extension Pack".
 2. No VS CODE, clique em file>preferences>settings e então pesquise por " java home".
 3. Clique em "Edit in settings.json" e dentro das aspas coloque o caminho do jdk.
-***Geralmente, no Linux fica em /usr/lib/jvm/java-11-openjdk-amd64/bin/java***
+***Geralmente, no Linux fica em /usr/lib/jvm/java-11-openjdk-amd64/bin/java ... Se não souber deixe vazio ("")***
 4. Agora pesquise por "java debug settings console".
 5. Mude para "External Terminal".
 6. Verifique se não há algo faltando no código, caso dê erro.
