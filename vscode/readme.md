@@ -32,7 +32,7 @@
 
 **Visual Studio Intellicode**
 
-[Snippets personalizados](/snippets)
+[Snippets personalizados](/vscode/snippets)
 
 %appdata%\Code\User
 
