@@ -9,7 +9,7 @@ for file in files:
 print('\n')
 java_file = input("[nome do arquivo] $ ")
 java_file2 = java_file.replace(".java", "")
-os.system("clear")
+os.system("clear -x")
 print(f"$ javac {java_file} && java {java_file2}\n\n")
 cmd = f"javac -encoding UTF8 -g:none {java_file} "
 cmd2 = f"java {java_file2}"
