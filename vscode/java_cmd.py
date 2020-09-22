@@ -8,6 +8,7 @@ for file in files:
         print(file)
 print('\n')
 java_file = input("[nome do arquivo] $ ")
+os.system("clear")
 cmd = f"javac -encoding UTF8 -g:none {java_file} "
 cmd2 = f"java {java_file}"
 cmd2 = cmd2.replace(".java", "")
