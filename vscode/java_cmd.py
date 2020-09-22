@@ -2,6 +2,7 @@ import os
 
 print(os.getcwd()+"\n")
 files = os.listdir()
+files = sorted(files)
 for file in files:
     if file.endswith('.java'):
         print(file)
