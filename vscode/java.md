@@ -9,6 +9,7 @@ Certifique que o java SDK esteja instalado em sua máquina.
 ***Geralmente, no Linux fica em /usr/lib/jvm/java-11-openjdk-amd64/bin/java***
 4. Agora pesquise por "java debug settings console".
 5. Mude para "External Terminal".
+6. Verifique se não há algo faltando no código, caso dê erro.
 
 Toda vez que for executar uma compilação no console, aperte F5.
 
