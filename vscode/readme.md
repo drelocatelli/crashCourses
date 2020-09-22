@@ -32,6 +32,8 @@
 
 **Visual Studio Intellicode**
 
+[Snippets personalizados](/snippets)
+
 %appdata%\Code\User
 
 [keybindings.json](keybindings.json)
