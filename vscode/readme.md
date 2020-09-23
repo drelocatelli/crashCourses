@@ -32,6 +32,8 @@
 
 **Visual Studio Intellicode**
 
+**TabNine**
+
 [Snippets personalizados](/vscode/snippets)
 
 %appdata%\Code\User
