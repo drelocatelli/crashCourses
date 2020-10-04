@@ -5,7 +5,7 @@ Crash Courses em PT-BR, selecione uma pasta/linguagem.
 | --------------------------- | ------------------- | ----------------------------- | --------------------------- | ----------------------------------------------------- |
 | [Javascript](/javascript) ★ | [MySQL](/mysql)     | [React Native](/react-native) | [Sass](/sass)               | [Menu DropDown (selection)](/dropdown-menu) ★         |
 | [PHP](/php) ★                | [MongoDB](/mongodb) | [Flutter](/flutter)           | [Bootstrap](/bootstrap)     | [Menu Dropdown (click)](/dropdown-menu-2) ★           |
-| [Java](/java)               |                     | [Ionic](/ionic)               | [Materialize](/materialize) | [VSCode Best Extensions](/vscode/) ★ |
+| [Java](/java) ★              |                     | [Ionic](/ionic)               | [Materialize](/materialize) | [VSCode Best Extensions](/vscode/) ★ |
 | [Python](/python)           |                     |                               | [Flexbox](/flexbox) ★       |[PHP OO em 30 min](https://www.youtube.com/watch?v=_mBqvoSJIBU)                                                       |
 
 
