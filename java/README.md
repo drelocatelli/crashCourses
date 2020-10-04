@@ -31,4 +31,10 @@ Baixe: https://raw.githubusercontent.com/drelocatelli/crashCourses/master/vscode
 execute esse comando.
 
 ### Imprimir tipo da variável no Java
+```
+int var = 1;
+String varType = ((String)((Object)var).getClass().getName()).replace("java.lang.","");
+System.out.println(varType);
+```
+
 [clique aqui](https://stackoverflow.com/questions/12361492/how-to-determine-the-primitive-type-of-a-primitive-variable#answer-12361525)
