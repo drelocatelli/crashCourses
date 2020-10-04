@@ -31,7 +31,7 @@ Baixe: https://raw.githubusercontent.com/drelocatelli/crashCourses/master/vscode
 execute esse comando.
 
 ### Imprimir tipo da variável no Java
-```
+```java
 int var = 1;
 String varType = ((String)((Object)var).getClass().getName()).replace("java.lang.","");
 System.out.println(varType);
