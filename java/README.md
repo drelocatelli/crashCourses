@@ -30,5 +30,5 @@ Baixe: https://raw.githubusercontent.com/drelocatelli/crashCourses/master/vscode
 
 execute esse comando.
 
-### Tipo Imprimir da variável no Java
+### Imprimir tipo da variável no Java
 [clique aqui](https://stackoverflow.com/questions/12361492/how-to-determine-the-primitive-type-of-a-primitive-variable#answer-12361525)
