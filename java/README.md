@@ -32,9 +32,12 @@ execute esse comando.
 
 ### Imprimir tipo da variável no Java
 ```java
-int var = 1;
-String varType = ((String)((Object)var).getClass().getName()).replace("java.lang.","").replace("Integer","Int");
-System.out.println(varType);
+    int var = 1;
+		String varType = ((String)((Object)var).getClass().getName()).replace("java.lang.","").replace("Integer","Int");
+		
+		if(varType.contains("Int")) {
+			System.out.println(true);
+		}
 ```
 
 [clique aqui](https://stackoverflow.com/questions/12361492/how-to-determine-the-primitive-type-of-a-primitive-variable#answer-12361525)
