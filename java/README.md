@@ -29,3 +29,6 @@ ClassPath = .;C:\Program Files\Java\jdk1.8.0_241\lib
 Baixe: https://raw.githubusercontent.com/drelocatelli/crashCourses/master/vscode/java_cmd.py
 
 execute esse comando.
+
+### Tipo Imprimir da variável no Java
+[clique aqui](https://stackoverflow.com/questions/12361492/how-to-determine-the-primitive-type-of-a-primitive-variable#answer-12361525)
