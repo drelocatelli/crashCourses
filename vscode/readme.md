@@ -34,6 +34,8 @@
 
 **TabNine**
 
+**Nord**
+
 [Snippets personalizados](/vscode/snippets)
 
 %appdata%\Code\User
