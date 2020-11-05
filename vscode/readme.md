@@ -36,6 +36,8 @@
 
 **Nord**
 
+**Rainbow brackets**
+
 [Snippets personalizados](/vscode/snippets)
 
 %appdata%\Code\User
