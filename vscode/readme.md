@@ -42,12 +42,13 @@
 
 To config code runner: settings.json > code-runner.executorMap
 
-``"code-runner.executorMap": {
+``
+"code-runner.executorMap": {
         "python": "python3 -u"
     }
     "code-runner.runInTerminal": true,
     "code-runner.clearPreviousOutput": true,
-    ``
+``
 
 [Snippets personalizados](/vscode/snippets)
 
