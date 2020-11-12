@@ -40,6 +40,8 @@
 
 **Code runner**
 
+To config code runner: settings.json > code-runner.executorMap
+
 [Snippets personalizados](/vscode/snippets)
 
 %appdata%\Code\User
