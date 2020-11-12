@@ -38,6 +38,8 @@
 
 **Rainbow brackets**
 
+**Code runner**
+
 [Snippets personalizados](/vscode/snippets)
 
 %appdata%\Code\User
