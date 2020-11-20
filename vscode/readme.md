@@ -36,7 +36,7 @@
 
 **Nord**
 
-**Rainbow brackets**
+**Bracket pair colorize**
 
 **Code runner**
 
