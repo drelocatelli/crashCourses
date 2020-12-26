@@ -1,5 +1,7 @@
 # Instalando Java no VS Code
 
+Instalador: [install_java.sh](install_java.sh)
+
 Certifique que o java SDK esteja instalado em sua máquina. 
 [Java SDK no Linux](https://www.youtube.com/watch?v=Hw9fYjH4lT4)
 
@@ -24,8 +26,3 @@ Path = (se tiver varios adiciona um ";" antes de colar:) C:\Program Files\Java\j
 
 ClassPath = .;C:\Program Files\Java\jdk1.8.0_241\lib
 
-
-## Comando python que executa java:
-Baixe: https://raw.githubusercontent.com/drelocatelli/crashCourses/master/vscode/java_cmd.py
-
-execute esse comando.
